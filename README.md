@@ -3,7 +3,7 @@
 | Current version | 0.1 |
 | --------------- | --- |
 
-Pixel is a minimalistic website scripting and styling library intended to provide a clean and responsive experience.
+Pixel is a minimalistic website framework intended to provide a clean and responsive experience.
 
 ## Current features
 
