@@ -15,21 +15,26 @@ function dropdown() {
   if (hiddenNav == 0) {
     navContent.classList.remove("show");
     hiddenNav++;
-    if (menuButton.dataset.src != "") {
-      ogImg = menuButton.src;
-      menuButton.src = menuButton.dataset.src;
-      menuButton.dataset.src = ogImg;
+    if (altMenuBtn!==false) {
+      if (menuButton.dataset.src != "") {
+        ogImg = menuButton.src;
+        menuButton.src = menuButton.dataset.src;
+        menuButton.dataset.src = ogImg;
+      }
+      else {}
     }
     else {}
   }
   else {
     navContent.classList.add("show");
     hiddenNav--;
-    if (menuButton.dataset.src != "") {
-      altImg = menuButton.src;
-      menuButton.src = menuButton.dataset.src;
-      menuButton.dataset.src = altImg;
+    if (altMenuBtn!==false) {
+      if (menuButton.dataset.src != "") {
+        altImg = menuButton.src;
+        menuButton.src = menuButton.dataset.src;
+        menuButton.dataset.src = altImg;
+      }
+      else {}
     }
-    else {}
   }
 }

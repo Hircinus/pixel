@@ -6,23 +6,18 @@
 body {
   scroll-behavior: smooth;
   text-rendering: geometricPrecision;
-  overflow-x: hidden;
   font-family: Arial, sans-serif;
 }
 .center {
   text-align: center
 }
 /* STYLING */
-:root {
-  --paleRed: rgba(255,0,0,0.3);
-  --paleBlue: rgba(0,0,255,0.3);
-  --paleGreen: rgba(0,255,0,0.3);
-}
 /* GRID */
 .row {
-  padding: 15px 0;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
+  padding: 15px 0;
 }
 .total-center {
   justify-content: center;
@@ -90,18 +85,18 @@ body {
   .col-lg-12 { flex: 0 0 100% }
 }
 /* SPACING */
-.space-sm { padding: 10px }
-.space-md { padding: 20px }
-.space-lg { padding: 35px }
+.pad-sm { padding: 10px }
+.pad-md { padding: 20px }
+.pad-lg { padding: 35px }
 /* NAV */
 #navContent {
-  display: none
+  display: none;
+  padding: 10px
 }
 #navContent.show {
   display: block
 }
 .nav {
-  padding: 10px;
   width: 100%;
 }
 .nav.fixed {
@@ -124,9 +119,6 @@ body {
 @media only screen and (min-width: 700px) {
   #navContent {
     display: block!important
-  }
-  .nav {
-    padding: 20px
   }
   .nav>div>.link {
     width: auto;
@@ -161,16 +153,23 @@ body {
   cursor: not-allowed!important;
 }
 /* paragraphs */
+.small {
+  font-size:
+}
 /* headings */
 h1 {
-  padding: 25px
+  padding: 25px;
+  font-size: 4em
 }
 h2 {
-  padding: 15px
+  padding: 15px;
+  font-size: 3em
 }
 h3 {
-  padding: 10px
+  padding: 10px;
+  font-size: 2em
 }
 h4, h5, h6 {
-  padding: 5px
+  padding: 5px;
+  font-size: 1em
 }
