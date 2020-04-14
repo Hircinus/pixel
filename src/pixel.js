@@ -1,10 +1,10 @@
-let navContent = document.getElementById('nav-content');
-let menuButton = document.getElementById('menu_button');
-let nav = document.getElementById('nav');
-var dark = 0;
-for (i=0;i<nav.classList.length;i++) {
-  if(nav.classList[i] == "dark") {
-    dark = 1;
+let navContent = document.getElementById('navContent');
+let menuButton = document.getElementById('menuButton');
+var ogImg;
+var hiddenNav = 1;
+for (i=0;i<navContent.classList.length;i++) {
+  if (navContent.classList[i] == "show") {
+    hiddenNav = 0;
     break;
   }
   else {
@@ -12,22 +12,24 @@ for (i=0;i<nav.classList.length;i++) {
   }
 }
 function dropdown() {
-  if (navContent.style.display == "block") {
-    navContent.style.display = "none";
-    if (dark == 1) {
-      menuButton.src = "menu_burger-light.svg";
+  if (hiddenNav == 0) {
+    navContent.classList.remove("show");
+    hiddenNav++;
+    if (menuButton.dataset.src != "") {
+      ogImg = menuButton.src;
+      menuButton.src = menuButton.dataset.src;
+      menuButton.dataset.src = ogImg;
     }
-    else {
-      menuButton.src = "menu_burger.svg";
-    }
+    else {}
   }
   else {
-    navContent.style.display = "block";
-    if (dark == 1) {
-      menuButton.src = "menu_close-light.svg";
+    navContent.classList.add("show");
+    hiddenNav--;
+    if (menuButton.dataset.src != "") {
+      altImg = menuButton.src;
+      menuButton.src = menuButton.dataset.src;
+      menuButton.dataset.src = altImg;
     }
-    else {
-      menuButton.src = "menu_close.svg";
-    }
+    else {}
   }
 }

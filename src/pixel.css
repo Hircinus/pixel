@@ -89,48 +89,70 @@ body {
   .col-lg-11 { flex: 0 0 91.67% }
   .col-lg-12 { flex: 0 0 100% }
 }
+/* SPACING */
+.space-sm { padding: 10px }
+.space-md { padding: 20px }
+.space-lg { padding: 35px }
 /* NAV */
-#nav-content {
+#navContent {
   display: none
 }
-nav {
+#navContent.show {
+  display: block
+}
+.nav {
   padding: 10px;
   width: 100%;
 }
-nav.fixed {
+.nav.fixed {
   position: fixed;
 }
-.menu {
-  background-color: transparent;
-  border: none;
-  padding: 5px
-}
-nav.dark {
+.nav.dark {
   background-color: #333
 }
-nav.dark>div>.link {
+.nav.dark>div>.link {
   color: white
 }
-nav.dark>div>.link:hover {
+.nav.dark>div>.link:hover {
   color: pink
 }
-nav>div>.link {
+.nav>div>.link {
   text-decoration: none;
   width: 100%;
   display: inline-block;
 }
-nav>div>.link:not(:last-child) {
+@media only screen and (min-width: 700px) {
+  #navContent {
+    display: block!important
+  }
+  .nav {
+    padding: 20px
+  }
+  .nav>div>.link {
+    width: auto;
+  }
+  .menuButton {
+    display: none
+  }
+  .nav>div>.link:not(:last-child) {
+    padding-bottom: 0px!important
+  }
+}
+.nav>div>.link:not(:last-child) {
   padding-right: 15px;
   padding-bottom: 10px
 }
-nav>div>.active {
+.nav>div>.active {
   font-weight: bold;
   text-decoration: underline;
 }
 /* TEXT */
 /* links & buttons */
-button {
-  cursor: pointer
+.button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  padding: 5px
 }
 .disabled {
   color: rgba(255,255,255,0.5)!important;
@@ -139,9 +161,6 @@ button {
   cursor: not-allowed!important;
 }
 /* paragraphs */
-p {
-  padding: 5px 15px
-}
 /* headings */
 h1 {
   padding: 25px
