@@ -5,6 +5,20 @@
 
 Pixel is a minimalistic website scripting and styling library intended to provide a modern and responsive atmosphere.
 
-## Features
+## Current features
 
+ - Easy flexbox with classes (row with 12 columns):
+ 
+ | Class | Viewport (width) |
+ | ----- | -------- |
+ | col-sm-* | 0px - 699px |
+ | col-md-* | 700px - 1199px |
+ | col-lg-* | 1200px + |
+ 
+ - Navbar:
+   - Dark and light theme;
+   - Mobile menu burger and close icons;
+ 
 (See [testing ground](https://hircinus.github.io/pixel/).)
+
+
