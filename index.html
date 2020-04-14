@@ -5,7 +5,13 @@
   <link rel="stylesheet" type="text/css" href="src/pixel.css">
   <!-- Styling here are to aid in distinguishing elements and demonstrating
   features and is not included in the Pixel library. -->
+  <script>var altMenuBtn = true;</script>
   <style>
+  :root {
+    --paleRed: rgba(255,0,0,0.3);
+    --paleBlue: rgba(0,0,255,0.3);
+    --paleGreen: rgba(0,255,0,0.3);
+  }
   .row {
     background-color: var(--paleRed);
   }
@@ -16,9 +22,13 @@
     background-color: var(--paleGreen);
   }
   footer {
-    background-color: darkgrey
+    background-color: darkgrey;
+    width: 100%
   }
   </style>
+  <!--<link rel="icon" type="image/png" href="/2020/assets/favicon.png">-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <nav class="nav dark">
@@ -36,11 +46,11 @@
   <h5>H5</h5>
   <h6>H6</h6>
   <div class="row justify-center">
-    <div class="col-lg-6 col-md-8 col-sm-12"><p>Another thing</p></div>
-    <div class="col-lg-6 col-md-2 col-sm-12"><p>Another 'nother thing</p></div>
+    <div class="col-lg-6 col-md-8 col-sm-12"><p class="pad-sm">Another thing</p></div>
+    <div class="col-lg-6 col-md-2 col-sm-12"><p class="pad-sm">Another 'nother thing</p></div>
   </div>
-  <footer class="space-md center">
-    <p>Site created by Jacob Alfahad using Pixel framework.</p>
+  <footer class="center">
+    <p class="pad-md">Site created by Jacob Alfahad using Pixel framework<br>&copy; 2020</p>
   </footer>
   <script src="src/pixel.js"></script>
 </body>
