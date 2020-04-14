@@ -3,13 +3,39 @@
 <head>
   <title>Testing ground for Pixel</title>
   <link rel="stylesheet" type="text/css" href="pixel.css">
+  <!-- Styling here are to aid in distinguishing elements and demonstrating
+  features and is not included in the Pixel library. -->
+  <style>
+  .row {
+    background-color: var(--paleRed);
+  }
+  [class*="col-"]:nth-child(2) {
+    background-color: var(--paleBlue);
+  }
+  [class*="col-"]:nth-child(1) {
+    background-color: var(--paleGreen);
+  }
+  </style>
 </head>
 <body>
+  <nav id="nav" class="dark">
+    <button class="menu" onclick="dropdown()"><img id="menu_button" src="menu_burger-light.svg"></button>
+    <div id="nav-content">
+      <a href="#" class="link active">Home</a>
+      <a href="#" class="link">About</a>
+      <a href="#" class="link disabled">Contact</a>
+    </div>
+  </nav>
   <h1>H1</h1>
   <h2>H2</h2>
   <h3>H3</h3>
   <h4>H4</h4>
   <h5>H5</h5>
   <h6>H6</h6>
+  <div class="row justify-center">
+    <div class="col-lg-6 col-md-8 col-sm-12"><p>Another thing</p></div>
+    <div class="col-lg-6 col-md-4 col-sm-12"><p>Another 'nother thing</p></div>
+  </div>
+  <script src="pixel.js"></script>
 </body>
 </html>
