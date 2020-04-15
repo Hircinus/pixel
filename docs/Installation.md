@@ -14,4 +14,4 @@ To use Pixel in your project, simply link the CSS into your header and your JS i
 ...
 ```
 
-Alternatively, using those same links, you can download the files and host them locally.
+Alternatively, using those same tags, you can download the files and host them locally.
