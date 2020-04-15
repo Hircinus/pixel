@@ -7,20 +7,6 @@
   features and is not included in the Pixel library. -->
   <script>var altMenuBtn = true;</script>
   <style>
-  :root {
-    --paleRed: rgba(255,0,0,0.3);
-    --paleBlue: rgba(0,0,255,0.3);
-    --paleGreen: rgba(0,255,0,0.3);
-  }
-  .row {
-    background-color: var(--paleRed);
-  }
-  [class*="col-"]:nth-child(2) {
-    background-color: var(--paleBlue);
-  }
-  [class*="col-"]:nth-child(1) {
-    background-color: var(--paleGreen);
-  }
   footer {
     background-color: darkgrey;
     width: 100%
@@ -32,19 +18,15 @@
 </head>
 <body>
   <nav class="nav dark">
-    <button class="menuButton button" onclick="dropdown()"><img id="menuButton" data-src="src/menu_close-light.svg" src="src/menu_burger-light.svg"></button>
+    <button class="menuButton button" onclick="dropdown()"><img id="menuButton" data-src="src/assets/menu_close-light.svg" src="src/assets/menu_burger-light.svg"></button>
     <div id="navContent">
-      <a href="#" class="link active">Home</a>
-      <a href="#" class="link">About</a>
-      <a href="#" class="link disabled">Contact</a>
+      <a href="index.html" class="link active">Home</a>
+      <a href="docs.html" class="link">Docs</a>
+      <a href="#" class="link disabled">About</a>
     </div>
   </nav>
-  <h1>H1</h1>
-  <h2>H2</h2>
-  <h3>H3</h3>
-  <h4>H4</h4>
-  <h5>H5</h5>
-  <h6>H6</h6>
+  <h1 class="pad-lg">Welcome</h1>
+  <p class="pad-md">To the Pixel testing grounds</p>
   <div class="row justify-center">
     <div class="col-lg-6 col-md-8 col-sm-12"><p class="pad-sm">Another thing</p></div>
     <div class="col-lg-6 col-md-2 col-sm-12"><p class="pad-sm">Another 'nother thing</p></div>
