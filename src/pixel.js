@@ -38,3 +38,18 @@ function dropdown() {
     }
   }
 }
+
+const pixel = {
+  modal: function(modal, cover) {
+    var modal = document.getElementById(modal);
+    var cover = document.getElementById(cover);
+    if (modal.style.display == "flex") {
+      modal.style.display = "none";
+      cover.style.display = "none";
+    }
+    else {
+      modal.style.display = "flex";
+      cover.style.display = "block";
+    }
+  }
+}
