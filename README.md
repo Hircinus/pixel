@@ -1,6 +1,6 @@
 # Pixel
 
-**Current version 0.1**
+**Current version: 0.1**
 
 Pixel is a minimalistic website framework intended to provide a clean and responsive experience.
 
