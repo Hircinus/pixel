@@ -1,9 +1,9 @@
 # Usage
 
 This document will guide you as to how to use the Pixel framework in your website.
-The classes and functions described here are all of the *current* ones that are considered stable. For experimental features, [consult the appropriate folder](https://github.com/Hircinus/pixel/exp-src/).
+The classes and functions described here are all of the *current* ones that are considered stable. For experimental features, [consult the appropriate folder](https://github.com/Hircinus/pixel/tree/master/exp-src).
 
-## Classes
+## CSS
 
 ### Grid
 
@@ -65,13 +65,38 @@ Here's an overview of the features:
  - Mobile-first collapsable navbar;
  - Built-in dark and light theme (with class ``dark`` added to ``nav``);
  - Menu burger for dropdown that changes based on state.
+
+### Misc
+
+There are also currently many miscellaneous classes for you to use, which include:
+
+**Padding:**
+
+ - ``pad-sm``;
+ - ``pad-md``;
+ - ``pad-lg``.
  
-Understandably, the latter feature might pose a problem for developpers who wish to add their own menu button, so disabling it is super easy:
+**Text:**
+
+ - ``disabled``;
+ - ``active`` (only for navlinks);
+ - ``center``;
+ - ``small``;
+ - ``medium``;
+ - ``large``.
+ 
+## JS
+
+### Navbar
+
+You can easily remove the option to switch between two different button images for the mobile dropdown menu by adding a snippet of JS before you link ``pixel.js``:
 ```
 ...
 <head>
-  <script>var altMenuBtn = false;</script>
+  <script>var altMenuBtn = false;</script><!-- Add this variable before calling "pixel.js" -->
   ...
 </head>
 ...
 ```
+
+As of right now (April 14, 2020), no other functionality has been added to JS. Stay tuned!
