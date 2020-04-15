@@ -1,7 +1,7 @@
 # Usage
 
 This document will guide you as to how to use the Pixel framework in your website.
-The classes and functions described here are all of the *current* ones that are considered stable. For experimental features, [consult the appropriate folder]().
+The classes and functions described here are all of the *current* ones that are considered stable. For experimental features, [consult the appropriate folder](https://github.com/Hircinus/pixel/exp-src/).
 
 ## Classes
 
