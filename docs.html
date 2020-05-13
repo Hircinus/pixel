@@ -6,27 +6,24 @@
   <!-- Code here is to aid in distinguishing elements and demonstrating
   features and is not included in the Pixel library. -->
   <script>
-  var altMenuBtn = true;
-  function helloThere() {
-    alert("Hello there!");
-  }
-  function genKenobi() {
-    alert("General Kenobi!");
-  }
-  function boldOne() {
-    alert("You are a bold one.");
-  }
   </script>
   <link rel="icon" type="image/png" href="src/assets/pixel-logo.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="nav center medium">
-    <button class="menuButton" onclick="dropdown()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
+  <nav class="nav medium">
+    <button class="menuButton" onclick="navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
     <div id="navContent">
+      <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
       <a href="index.html" class="link">Home</a>
-      <a href="docs.html" class="link active">Docs</a>
+      <div class="dropdown">
+        <a href="docs.html" class="link active">Docs</a>
+        <div id="dropdownMenu" class="dropdown-content">
+          <a href="docs.html#CSS" class="link">CSS</a>
+          <a href="docs.html#JS" class="link">JS</a>
+        </div>
+      </div>
       <a href="#" class="link disabled">About</a>
     </div>
   </nav>
@@ -39,10 +36,17 @@
       </div>
     </div>
   </div>
+  <a name="CSS"></a>
+  <div class="row">
+    <div class="col-12">
+      <div class="pad-md">
+        <h2>CSS</h2>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12">
       <div class="pad-md">
-        <h2>CSS</h2>
         <h3>Buttons</h3>
         <p>
           Buttons come in a variety of colors to demonstrate different messages.
@@ -70,6 +74,7 @@
       </div>
     </div>
   </div>
+  <a name="JS"></a>
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12">
       <div class="pad-md">
@@ -124,12 +129,19 @@
     <div class="col-lg-8 col-md-8 col-sm-12">
       <div class="pad-sm">
         <code class="round-sm">
-          &lt;nav class="nav center medium"&gt;<br>
-          &emsp;&lt;button class="menuButton" onclick="dropdown()"&gt;&lt;img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"&gt;&lt;/button&gt;<br>
-          &emsp;&lt;div id="navContent"&gt;<br>
-          &emsp;&emsp;&lt;a href="index.html" class="link"&gt;Home&lt;/a&gt;<br>
-          &emsp;&emsp;&lt;a href="docs.html" class="link active"&gt;Docs&lt;/a&gt;<br>
-          &emsp;&emsp;&lt;a href="#" class="link disabled"&gt;About&lt;/a&gt;<br>
+          &lt;nav class=&quot;nav medium&quot;&gt;<br>
+          &emsp;&lt;button class=&quot;menuButton&quot; onclick=&quot;navbarExtend()&quot;&gt;&lt;img id=&quot;menuButton&quot; data-src=&quot;src/assets/menu_close.svg&quot; src=&quot;src/assets/menu_burger.svg&quot;&gt;&lt;/button&gt;<br>
+          &emsp;&lt;div id=&quot;navContent&quot;&gt;<br>
+          &emsp;&emsp;&lt;a href=&quot;index.html&quot; class=&quot;link&quot;&gt;&lt;img src=&quot;src/assets/pixel-logo.svg&quot;&gt;&lt;/a&gt;<br>
+          &emsp;&emsp;&lt;a href=&quot;index.html&quot; class=&quot;link active&quot;&gt;Home&lt;/a&gt;<br>
+          &emsp;&emsp;&lt;div class=&quot;dropdown&quot;&gt;<br>
+          &emsp;&emsp;&emsp;&lt;a href=&quot;docs.html&quot; class=&quot;link&quot;&gt;Docs&lt;/a&gt;<br>
+          &emsp;&emsp;&emsp;&lt;div id=&quot;dropdownMenu&quot; class=&quot;dropdown-content&quot;&gt;<br>
+          &emsp;&emsp;&emsp;&emsp;&lt;a href=&quot;docs.html#CSS&quot; class=&quot;link&quot;&gt;CSS&lt;/a&gt;<br>
+          &emsp;&emsp;&emsp;&emsp;&lt;a href=&quot;docs.html#JS&quot; class=&quot;link&quot;&gt;JS&lt;/a&gt;<br>
+          &emsp;&emsp;&emsp;&lt;/div&gt;<br>
+          &emsp;&emsp;&lt;/div&gt;<br>
+          &emsp;&emsp;&lt;a href=&quot;#&quot; class=&quot;link disabled&quot;&gt;About&lt;/a&gt;<br>
           &emsp;&lt;/div&gt;<br>
           &lt;/nav&gt;
         </code>

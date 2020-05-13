@@ -10,18 +10,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="nav center medium">
-    <button class="menuButton" onclick="dropdown()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
+  <nav class="nav medium">
+    <button class="menuButton" onclick="navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
     <div id="navContent">
+      <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
       <a href="index.html" class="link active">Home</a>
-      <a href="docs.html" class="link">Docs</a>
+      <div class="dropdown">
+        <a href="docs.html" class="link">Docs</a>
+        <div id="dropdownMenu" class="dropdown-content">
+          <a href="docs.html#CSS" class="link">CSS</a>
+          <a href="docs.html#JS" class="link">JS</a>
+        </div>
+      </div>
       <a href="#" class="link disabled">About</a>
     </div>
   </nav>
   <div class="row total-center center">
     <div class="col-lg-2 col-md-6 col-sm-12"><img src="src/assets/pixel-logo.svg"></div>
     <div class="col-lg-10 col-md-6 col-sm-12"><h1>Pixel</h1>
-      <p>A clean, simple <a href="https://www.github.com/Hircinus/">website framework</a> built on vanilla CSS and JS.</p>
+      <p>A clean, simple website framework built on vanilla CSS and JS.</p>
       <button onclick="pixel.modal('modal', 'cover')" class="blue text-white medium">Current version</button>
     </div>
   </div>
