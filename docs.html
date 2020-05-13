@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="nav medium">
+  <nav id="navbar" class="nav dark center medium">
     <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
     <div id="navContent">
       <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
@@ -20,6 +20,7 @@
       <div class="dropdown">
         <a href="docs.html" class="link active">Docs</a>
         <div id="dropdownMenu" class="dropdown-content">
+          <a href="docs.html#Grid" class="link">Grid</a>
           <a href="docs.html#CSS" class="link">CSS</a>
           <a href="docs.html#JS" class="link">JS</a>
         </div>
@@ -32,7 +33,46 @@
       <div class="pad-md">
         <h1>Docs</h1>
         <hr class="text-blue blue round-sm thick-md">
-        <p>This page contains all the classes you can use with Pixel for CSS and the functions you have available in JS.</p>
+        <p>
+          This page contains all the classes you can use with Pixel for CSS and the functions you have available in JS.
+          <br>
+          As a reminder, please know that this framework is intended to be a base for web projects as opposed to a full and feature-rich foundation. Therefore, people interested in using Pixel are encouraged to give their own spin to it with their own stylesheet or simply using what's already available to quickly set up.
+        </p>
+      </div>
+    </div>
+  </div>
+  <a name="Grid"></a>
+  <div class="row">
+    <div class="col-12">
+      <div class="pad-md">
+        <h2>Grid</h2>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-12">
+      <div class="pad-md">
+        <h3>Basic rows and columns</h3>
+        <p>
+          Barebone rows and columns are great tools for organizing your page!
+          <br>
+          Pixel's grid system is built using flexbox.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-12">
+      <p>Check out this page's layout to get an idea of how it looks!</p>
+      <div class="pad-sm">
+        <code class="round-sm">
+        &lt;div class="row"&gt;<br>
+        &emsp;&lt;div class="col-lg-6 col-md-8 col-sm-12"&gt;<br>
+        &emsp;&emsp;&lt;p>One section&lt;/p&gt;<br>
+        &emsp;&lt;/div&gt;<br>
+        &emsp;&lt;div class="col-lg-6 col-md-4 col-sm-12"&gt;<br>
+        &emsp;&emsp;&lt;p&gt;Another section&lt;/p&gt;<br>
+        &emsp;&lt;/div&gt;<br>
+        &lt;/div&gt;
+        </code>
       </div>
     </div>
   </div>
@@ -91,15 +131,14 @@
       <div class="pad-sm">
         <code class="round-sm">
         &lt;div id="cover" class="modal-cover"&gt;&lt;/div&gt;<br>
-        &emsp;&lt;div id="modal" class="row total-center modal"&gt;<br>
-        &emsp;&emsp;&lt;div class="col-6 pad-md round-md"&gt;<br>
-        &emsp;&emsp;&emsp;&lt;h2&gt;Current version&lt;/h2&gt;<br>
-        &emsp;&emsp;&emsp;&lt;hr class="thick-sm blue text-blue"&gt;<br>
-        &emsp;&emsp;&emsp;&lt;p&gt;0.1 (Alpha)&lt;br&gt;<br>
-        &emsp;&emsp;&emsp;Status: Stable (Pre-release)&lt;br&gt;<br>
-        &emsp;&emsp;&emsp;&lt;a href='https://www.github.com/Hircinus/pixel'>GitHub repo&lt;/a&gt;&lt;/p&gt;<br>
-        &emsp;&emsp;&emsp;&lt;button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium"&gt;Close&lt;/button&gt;<br>
-        &emsp;&emsp;&lt;/div&gt;<br>
+        &lt;div id="modal" class="row total-center modal"&gt;<br>
+        &emsp;&lt;div class="col-6 pad-md round-md"&gt;<br>
+        &emsp;&emsp;&lt;h2&gt;Current version&lt;/h2&gt;<br>
+        &emsp;&emsp;&lt;hr class="thick-sm blue text-blue"&gt;<br>
+        &emsp;&emsp;&lt;p&gt;0.1 (Alpha)&lt;br&gt;<br>
+        &emsp;&emsp;Status: Stable (Pre-release)&lt;br&gt;<br>
+        &emsp;&emsp;&lt;a href='https://www.github.com/Hircinus/pixel'>GitHub repo&lt;/a&gt;&lt;/p&gt;<br>
+        &emsp;&emsp;&lt;button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium"&gt;Close&lt;/button&gt;<br>
         &emsp;&lt;/div&gt;<br>
         &lt;/div&gt;
         </code>
@@ -108,7 +147,7 @@
   </div>
   <div id="cover" class="modal-cover"></div>
   <div id="modal" class="row total-center modal">
-    <div class="col-6 pad-md round-md">
+    <div class="col-lg-6 col-md-8 col-sm-10 pad-md round-md">
       <h2>Current version</h2>
       <hr class="thick-sm blue text-blue">
       <p>0.1 (Alpha)<br>

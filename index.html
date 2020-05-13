@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="nav medium">
+  <nav id="navbar" class="nav center medium">
     <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
     <div id="navContent">
       <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
@@ -18,6 +18,7 @@
       <div class="dropdown">
         <a href="docs.html" class="link">Docs</a>
         <div id="dropdownMenu" class="dropdown-content">
+          <a href="docs.html#Grid" class="link">Grid</a>
           <a href="docs.html#CSS" class="link">CSS</a>
           <a href="docs.html#JS" class="link">JS</a>
         </div>
@@ -30,6 +31,8 @@
     <div class="col-lg-10 col-md-6 col-sm-12"><h1>Pixel</h1>
       <p>A clean, simple website framework built on vanilla CSS and JS.</p>
       <button onclick="pixel.modal('modal', 'cover')" class="blue text-white medium">Current version</button>
+      <button onclick="window.location.replace('https://www.github.com/Hircinus/pixel')" class="green text-white medium">Contribute</button>
+      <button onclick="window.location.replace('https://github.com/Hircinus/pixel/blob/master/LICENSE')" class="orange text-white medium">License</button>
     </div>
   </div>
   <div id="cover" class="modal-cover"></div>
