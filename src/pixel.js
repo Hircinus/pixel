@@ -1,5 +1,6 @@
 let navContent = document.getElementById('navContent');
 let menuButton = document.getElementById('menuButton');
+let navbar = document.getElementById("navbar");
 var ogImg;
 var hiddenNav = 1;
 for (i=0;i<navContent.classList.length;i++) {
@@ -45,5 +46,17 @@ const pixel = {
       }
       else {}
     }
-  }
+  },
+  stickyElement: function() {
+    var headerHeight = getComputedStyle(navbar).height.split('px')[0];
+    var scrollValue = window.scrollY;
+
+    if (scrollValue - 200 > headerHeight) {
+      navbar.classList.add('fixed');
+    }
+    else if (scrollValue < headerHeight) {
+      navbar.classList.remove('fixed');
+    }
+  },
 }
+window.addEventListener('scroll', pixel.stickyElement);
