@@ -12,12 +12,12 @@ Pixel's grid is built using mobile-first flexbox that can be easily applied usin
 ...
 <div class="row justify-center">
   <div class="col-lg-6 col-md-8 col-sm-11">
-    <h1 class="pad-md">Welcome!</h1>
-    <p class="pad-sm">Some text...</p>
+    <h1>Welcome!</h1>
+    <p>Some text...</p>
   </div>
   <div class="col-lg-6 col-md-2 col-sm-11">
-    <h1 class="pad-md">Another title</h1>
-    <p class="pad-sm">Some more text...</p>
+    <h1>Another title</h1>
+    <p>Some more text...</p>
   </div>
 </div>
 ...
@@ -45,38 +45,62 @@ Rows can also have classes to handle justification and alignment of its children
  
 ### Navbar
 
-Pixel's navbar is fully equipped right from the start with useful features. Remember that you need ``pixel.js`` to use the navbar.
+Pixel's navbar is fully equipped right from the start with useful features. Remember that you need ``pixel.min.js`` to use the navbar.
 Below is an example of a navbar with Pixel:
 ```
 ...
-<nav class="nav dark">
-  <button class="menuButton button" onclick="dropdown()"><img id="menuButton" data-src="src/menu_close-light.svg" src="src/menu_burger-light.svg"></button>
-  <div id="navContent">
-    <a href="#" class="link active">Home</a>
-    <a href="#" class="link">About</a>
-    <a href="#" class="link disabled">Contact</a>
-  </div>
-</nav>
+<nav id="navbar" class="nav dark center medium">
+    <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
+    <div id="navContent">
+      <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
+      <a href="index.html" class="link">Home</a>
+      <a href="#" class="link disabled">About</a>
+    </div>
+  </nav>
 ...
 ```
 
 Here's an overview of the features:
 
  - Mobile-first collapsable navbar;
+ - In-menu drodpowns:
+ ```
+ <div class="dropdown">
+   <a href="docs.html" class="link active">Docs</a>
+   <div id="dropdownMenu" class="dropdown-content">
+     <a href="docs.html#Grid" class="link">Grid</a>
+     <a href="docs.html#CSS" class="link">CSS</a>
+     <a href="docs.html#JS" class="link">JS</a>
+   </div>
+ </div>
+ ```
  - Built-in dark and light theme (with class ``dark`` added to ``nav``);
  - Menu burger for dropdown that changes based on state.
+ 
+### Buttons
+
+With a wide array of available colours, you can convey any message to your site visitors with stylized buttons:
+```
+<button class="blue text-white medium">Info</button>
+<button class="orange text-white medium">Warning</button>
+<button class="yellow medium">Important</button>
+<button class="green text-white medium">Success</button>
+<button class="red text-white medium">Alert</button>
+<button class="dark text-white medium">Other</button>
+```
+**Note: these classes can also be used on other elements, see Misc > Colours.**
 
 ### Misc
 
 There are also currently many miscellaneous classes for you to use, which include:
 
-**Padding:**
+#### Padding:
 
  - ``pad-sm``;
  - ``pad-md``;
  - ``pad-lg``.
  
-**Text:**
+#### Text:
 
  - ``disabled``;
  - ``active`` (only for navlinks);
@@ -85,18 +109,54 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``medium``;
  - ``large``.
  
+#### Colours:
+
+**Background-color:**
+
+ - ``blue``;
+ - ``orange``;
+ - ``yellow``;
+ - ``green``;
+ - ``red``;
+ - ``dark``;
+ - ``pink``;
+ - ``purple``;
+ - ``white``;
+ - ``grey``;
+ - ``black``.
+ 
+**Color:**
+
+ - ``text-blue``;
+ - ``text-orange``;
+ - ``text-yellow``;
+ - ``text-green``;
+ - ``text-red``;
+ - ``text-dark``;
+ - ``text-pink``;
+ - ``text-purple``;
+ - ``text-white``;
+ - ``text-grey``;
+ - ``text-black``.
+ 
 ## JS
 
-### Navbar
+### Modal
 
-You can easily remove the option to switch between two different button images for the mobile dropdown menu by adding a snippet of JS before you link ``pixel.js``:
+You can quickly make modals to use in your site to display information for your visitors:
 ```
-...
-<head>
-  <script>var altMenuBtn = false;</script><!-- Add this variable before calling "pixel.js" -->
-  ...
-</head>
-...
+<div id="cover" class="modal-cover"></div>
+<div id="modal" class="row total-center modal">
+  <div class="col-lg-6 col-md-8 col-sm-10 pad-md round-md">
+    <h2>Current version</h2>
+    <hr class="thick-sm blue text-blue">
+    <p>0.1 (Alpha)<br>
+    Status: Stable (Pre-release)<br>
+    <a href='https://www.github.com/Hircinus/pixel'>GitHub repo</a></p>
+    <button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium">Close</button>
+  </div>
+</div>
 ```
+*If using multiple modals, the ``#cover`` div does not to be rewritten.*
 
-As of right now (April 14, 2020), no other functionality has been added to JS. Stay tuned!
+As of right now (May 13, 2020), this is the end of this page. Stay tuned!
