@@ -4,14 +4,14 @@ To use Pixel in your project, simply link the CSS into your header and your JS i
 ```
 ...
 <head>
-  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Hircinus/pixel/master/src/pixel.css">
+  <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Hircinus/pixel/master/src/pixel.min.css">
   ...
 </head>
 <body>
   ...
-  <script src="https://raw.githubusercontent.com/Hircinus/pixel/master/src/pixel.js"></script>
+  <script src="https://raw.githubusercontent.com/Hircinus/pixel/master/src/pixel.min.js"></script>
 </body>
 ...
 ```
 
-Alternatively, using those same tags, you can download the files and host them locally.
+Alternatively, using those same links, you can download the files and host them locally.
