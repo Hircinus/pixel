@@ -30,19 +30,28 @@
     <div class="col-lg-2 col-md-6 col-sm-12"><img src="src/assets/pixel-logo.svg"></div>
     <div class="col-lg-10 col-md-6 col-sm-12"><h1>Pixel</h1>
       <p>A clean, simple website framework built on vanilla CSS and JS.</p>
-      <button onclick="pixel.modal('modal', 'cover')" class="blue text-white medium">Current version</button>
+      <button onclick="pixel.modal('modal', 'cover')" class="blue text-white medium">Import</button>
       <button onclick="window.location.replace('https://www.github.com/Hircinus/pixel')" class="green text-white medium">Contribute</button>
       <button onclick="window.location.replace('https://github.com/Hircinus/pixel/blob/master/LICENSE')" class="orange text-white medium">License</button>
     </div>
   </div>
   <div id="cover" class="modal-cover"></div>
   <div id="modal" class="row total-center modal">
-    <div class="col-6 pad-md round-md">
-      <h2>Current version</h2>
+    <div class="col-6 round-md">
+      <h2>How to import Pixel</h2>
       <hr class="thick-sm blue text-blue">
-      <p>0.1 (Alpha)<br>
-      Status: Stable (Pre-release)<br>
-      <a href='https://www.github.com/Hircinus/pixel'>GitHub repo</a></p>
+      <p>To use Pixel, you can either link the necessary files to your site like so:<br>
+        <code class="round-sm">
+        &lt;head&gt;<br>
+        &emsp;&lt;link rel="stylesheet" type="text/css" href="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.css"&gt;<br>
+        &lt;/head&gt;<br>
+        &lt;body&gt;<br>
+        &emsp;...<br>
+        &emsp;&lt;script src="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.js"&gt;&lt;/script&gt;<br>
+        &lt;/body&gt;
+        </code>
+        <br>
+        Or you can download the source files using those respective links.<br>
       <button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium">Close</button>
     </div>
   </div>

@@ -5,16 +5,14 @@
   <link rel="stylesheet" type="text/css" href="src/pixel.css">
   <!-- Code here is to aid in distinguishing elements and demonstrating
   features and is not included in the Pixel library. -->
-  <script>
-  </script>
   <link rel="icon" type="image/png" href="src/assets/pixel-logo.svg">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav id="navbar" class="nav dark center medium">
-    <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
-    <div id="navContent">
+  <nav id="navbar" class="nav justify-center dark sticky center medium">
+    <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close-light.svg" src="src/assets/menu_burger-light.svg"></button>
+    <div id="navContent" class="nav-content">
       <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
       <a href="index.html" class="link">Home</a>
       <div class="dropdown">
@@ -30,71 +28,61 @@
   </nav>
   <div class="row justify-center">
     <div class="col-12">
-      <div class="pad-md">
-        <h1>Docs</h1>
-        <hr class="text-blue blue round-sm thick-md">
-        <p>
-          This page contains all the classes you can use with Pixel for CSS and the functions you have available in JS.
-          <br>
-          As a reminder, please know that this framework is intended to be a base for web projects as opposed to a full and feature-rich foundation. Therefore, people interested in using Pixel are encouraged to give their own spin to it with their own stylesheet or simply using what's already available to quickly set up.
-        </p>
-      </div>
+      <h1>Docs</h1>
+      <hr class="text-blue blue long center round-sm thick-md">
+      <p>
+        This page contains all the classes you can use with Pixel for CSS and the functions you have available in JS.
+        <br>
+        As a reminder, please know that this framework is intended to be a base for web projects as opposed to a full and feature-rich foundation. Therefore, people interested in using Pixel are encouraged to give their own spin to it with their own stylesheet or simply using what's already available to quickly set up.
+      </p>
     </div>
   </div>
   <a name="Grid"></a>
   <div class="row">
     <div class="col-12">
-      <div class="pad-md">
-        <h2>Grid</h2>
-      </div>
+      <h2>Grid</h2>
+      <hr class="text-blue blue short round-sm thick-sm">
     </div>
   </div>
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="pad-md">
-        <h3>Basic rows and columns</h3>
-        <p>
-          Barebone rows and columns are great tools for organizing your page!
-          <br>
-          Pixel's grid system is built using flexbox.
-        </p>
-      </div>
+      <h3>Basic rows and columns</h3>
+      <p>
+        Barebone rows and columns are great tools for organizing your page!
+        <br>
+        Pixel's grid system is built using flexbox.
+      </p>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12">
       <p>Check out this page's layout to get an idea of how it looks!</p>
-      <div class="pad-sm">
-        <code class="round-sm">
-        &lt;div class="row"&gt;<br>
-        &emsp;&lt;div class="col-lg-6 col-md-8 col-sm-12"&gt;<br>
-        &emsp;&emsp;&lt;p>One section&lt;/p&gt;<br>
-        &emsp;&lt;/div&gt;<br>
-        &emsp;&lt;div class="col-lg-6 col-md-4 col-sm-12"&gt;<br>
-        &emsp;&emsp;&lt;p&gt;Another section&lt;/p&gt;<br>
-        &emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;
-        </code>
-      </div>
+      <code class="round-sm">
+      &lt;div class="row"&gt;<br>
+      &emsp;&lt;div class="col-lg-6 col-md-8 col-sm-12"&gt;<br>
+      &emsp;&emsp;&lt;p>One section&lt;/p&gt;<br>
+      &emsp;&lt;/div&gt;<br>
+      &emsp;&lt;div class="col-lg-6 col-md-4 col-sm-12"&gt;<br>
+      &emsp;&emsp;&lt;p&gt;Another section&lt;/p&gt;<br>
+      &emsp;&lt;/div&gt;<br>
+      &lt;/div&gt;
+      </code>
     </div>
   </div>
   <a name="CSS"></a>
   <div class="row">
     <div class="col-12">
-      <div class="pad-md">
-        <h2>CSS</h2>
-      </div>
+      <h2>CSS</h2>
+      <hr class="text-blue blue short round-sm thick-sm">
     </div>
   </div>
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="pad-md">
-        <h3>Buttons</h3>
-        <p>
-          Buttons come in a variety of colors to demonstrate different messages.
-        </p>
-      </div>
+      <h3>Buttons</h3>
+      <p>
+        Buttons come in a variety of colors to demonstrate different messages.
+      </p>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12">
-      <div class="pad-sm center">
+      <div class="center">
         <button class="blue text-white medium">Info</button>
         <button class="orange text-white medium">Warning</button>
         <button class="yellow medium">Important</button>
@@ -102,47 +90,40 @@
         <button class="red text-white medium">Alert</button>
         <button class="dark text-white medium">Other</button>
       </div>
-      <div class="pad-sm">
-        <code class="round-sm">
-        &lt;button class="blue text-white medium"&gt;Info&lt;/button&gt;<br>
-        &lt;button class="orange text-white medium"&gt;Warning&lt;/button&gt;<br>
-        &lt;button class="yellow text-white medium"&gt;Important&lt;/button&gt;<br>
-        &lt;button class="green text-white medium"&gt;Success&lt;/button&gt;<br>
-        &lt;button class="red text-white medium"&gt;Alert&lt;/button&gt;<br>
-        &lt;button class="dark text-white medium"&gt;Other&lt;/button&gt;<br>
-        </code>
-      </div>
+      <code class="round-sm">
+      &lt;button class="blue text-white medium"&gt;Info&lt;/button&gt;<br>
+      &lt;button class="orange text-white medium"&gt;Warning&lt;/button&gt;<br>
+      &lt;button class="yellow text-white medium"&gt;Important&lt;/button&gt;<br>
+      &lt;button class="green text-white medium"&gt;Success&lt;/button&gt;<br>
+      &lt;button class="red text-white medium"&gt;Alert&lt;/button&gt;<br>
+      &lt;button class="dark text-white medium"&gt;Other&lt;/button&gt;<br>
+      </code>
     </div>
   </div>
-  <a name="JS"></a>
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="pad-md">
-        <h3>Modal</h3>
-        <p>
-          A modal is a cool way to display information through a button click.
-        </p>
-      </div>
+      <h3>Modal</h3>
+      <p>
+        A modal is a cool way to display information through a button click.
+      </p>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12">
-      <div class="pad-sm center">
+      <div class="center">
         <button onclick="pixel.modal('modal','cover')" class="blue text-white medium">Modal</button>
       </div>
-      <div class="pad-sm">
-        <code class="round-sm">
-        &lt;div id="cover" class="modal-cover"&gt;&lt;/div&gt;<br>
-        &lt;div id="modal" class="row total-center modal"&gt;<br>
-        &emsp;&lt;div class="col-6 pad-md round-md"&gt;<br>
-        &emsp;&emsp;&lt;h2&gt;Current version&lt;/h2&gt;<br>
-        &emsp;&emsp;&lt;hr class="thick-sm blue text-blue"&gt;<br>
-        &emsp;&emsp;&lt;p&gt;0.1 (Alpha)&lt;br&gt;<br>
-        &emsp;&emsp;Status: Stable (Pre-release)&lt;br&gt;<br>
-        &emsp;&emsp;&lt;a href='https://www.github.com/Hircinus/pixel'>GitHub repo&lt;/a&gt;&lt;/p&gt;<br>
-        &emsp;&emsp;&lt;button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium"&gt;Close&lt;/button&gt;<br>
-        &emsp;&lt;/div&gt;<br>
-        &lt;/div&gt;
-        </code>
-      </div>
+      <code class="round-sm">
+      &lt;div id="cover" class="modal-cover"&gt;&lt;/div&gt;<br>
+      &lt;div id="modal" class="row total-center modal"&gt;<br>
+      &emsp;&lt;div class="col-6 pad-md round-md"&gt;<br>
+      &emsp;&emsp;&lt;h2&gt;Current version&lt;/h2&gt;<br>
+      &emsp;&emsp;&lt;hr class="thick-sm blue text-blue"&gt;<br>
+      &emsp;&emsp;&lt;p&gt;0.1 (Alpha)&lt;br&gt;<br>
+      &emsp;&emsp;Status: Stable (Pre-release)&lt;br&gt;<br>
+      &emsp;&emsp;&lt;a href='https://www.github.com/Hircinus/pixel'>GitHub repo&lt;/a&gt;&lt;/p&gt;<br>
+      &emsp;&emsp;&lt;button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium"&gt;Close&lt;/button&gt;<br>
+      &emsp;&lt;/div&gt;<br>
+      &lt;/div&gt;
+      </code>
     </div>
   </div>
   <div id="cover" class="modal-cover"></div>
@@ -158,15 +139,12 @@
   </div>
   <div class="row">
     <div class="col-lg-4 col-md-4 col-sm-12">
-      <div class="pad-md">
-        <h3>Navbar</h3>
-        <p>
-          Pixel's navbar comes out of the box with responsive design and an alternating menu dropdown button on small screen sizes. Check out the navbar of this page to see it in action!
-        </p>
-      </div>
+      <h3>Navbar</h3>
+      <p>
+        Pixel's navbar comes out of the box with responsive design and an alternating menu dropdown button on small screen sizes. Check out the navbar of this page to see it in action!
+      </p>
     </div>
     <div class="col-lg-8 col-md-8 col-sm-12">
-      <div class="pad-sm">
         <code class="round-sm">
           &lt;nav class=&quot;nav medium&quot;&gt;<br>
           &emsp;&lt;button class=&quot;menuButton&quot; onclick=&quot;navbarExtend()&quot;&gt;&lt;img id=&quot;menuButton&quot; data-src=&quot;src/assets/menu_close.svg&quot; src=&quot;src/assets/menu_burger.svg&quot;&gt;&lt;/button&gt;<br>
@@ -184,11 +162,31 @@
           &emsp;&lt;/div&gt;<br>
           &lt;/nav&gt;
         </code>
-      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h2>JS</h2>
+      <hr class="text-blue blue short round-sm thick-sm">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-10 col-md-11 col-sm-12">
+        <h3>Cookie manipulation</h3>
+        <p>
+          You can use inbuilt cookie manipulation functions with pixel for various uses:<br></p>
+          <code class="round-sm">
+          pixel.addCookie(cname, value);<br>
+          pixel.getCookie(cname);<br>
+          pixel.editCookie(cname, newValue);
+          </code><br>
+        <p>
+          Note: <inline class="round-sm">cname</inline> and <inline class="round-sm">value</inline> cannot contain separators or US-ASCII control characters.
+        </p>
     </div>
   </div>
   <footer class="center dark">
-    <p class="small text-white pad-md">Site created by Jacob Alfahad using the Pixel framework &copy; 2020</p>
+    <p class="small text-white">Site created by Jacob Alfahad using the Pixel framework &copy; 2020</p>
   </footer>
   <script src="src/pixel.js"></script>
 </body>
