@@ -139,6 +139,24 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``text-grey``;
  - ``text-black``.
  
+#### Horizontal rule
+
+ - ``short``;
+ - ``long`` (note: not adding ``short`` or ``long`` will default to a medium length);
+ - ``thick-sm``;
+ - ``thick-lg`` (note: not adding ``thick-sm`` or ``thick-lg`` will default to a medium thickness.
+ 
+#### Border-radius
+
+ - ``round-sm``;
+ - ``round-md``;
+ - ``round-lg``.
+ 
+#### Code
+
+ - ``<code>...</code>``;
+ - ``<inline>...</inline>``.
+ 
 ## JS
 
 ### Modal
