@@ -177,4 +177,12 @@ You can quickly make modals to use in your site to display information for your 
 ```
 *If using multiple modals, the ``#cover`` div does not to be rewritten.*
 
-As of right now (May 13, 2020), this is the end of this page. Stay tuned!
+### Cookie manipulation
+
+With Pixel, using cookies is as simple as a few functions:
+
+ - ``pixel.addCookie(cname, value)``;
+ - ``pixel.editCookie(cname, newValue)``;
+ - ``pixel.getCookie(cname, value)``.
+
+As of right now (May 14, 2020), this is the end of this page. Stay tuned!
