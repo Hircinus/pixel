@@ -12,6 +12,15 @@ for (i=0;i<navContent.classList.length;i++) {
     continue;
   }
 }
+for (i=0;i<navbar.classList.length;i++) {
+  if (navbar.classList[i] == "sticky") {
+    navbarSticky = true;
+    break;
+  }
+  else {
+    continue;
+  }
+}
 const pixel = {
   modal: function(modal, cover) {
     var modal = document.getElementById(modal);
@@ -24,6 +33,44 @@ const pixel = {
       modal.style.display = "flex";
       cover.style.display = "block";
     }
+  },
+  editCookie: function(cname, newValue) {
+    var cookies = document.cookie;
+    indCookies = cookies.split(";");
+    for(i=0;i<indCookies.length;i++) {
+      parts = indCookies[i].split("=");
+      name = parts[0];
+      if(cname==name) {
+        parts[1] = newValue;
+        return newValue;
+        break;
+      }
+      else {
+        continue;
+      }
+    }
+    return false;
+  },
+  getCookie: function(cname) {
+    var cookies = document.cookie;
+    indCookies = cookies.split(";");
+    for(i=0;i<indCookies.length;i++) {
+      parts = indCookies[i].split("=");
+      name = parts[0];
+      if(cname==name) {
+        cvalue = parts[1];
+        return cvalue;
+        break;
+      }
+      else {
+        continue;
+      }
+    }
+    return false;
+  },
+  addCookie: function(cname, value) {
+    var newCookie = cname + "=" + value;
+    document.cookie += newCookie;
   },
   navbarExtend: function() {
     if (hiddenNav == 0) {
@@ -48,15 +95,18 @@ const pixel = {
     }
   },
   stickyElement: function() {
-    var headerHeight = getComputedStyle(navbar).height.split('px')[0];
-    var scrollValue = window.scrollY;
+    if(navbarSticky==true) {
+      var headerHeight = getComputedStyle(navbar).height.split('px')[0];
+      var scrollValue = window.scrollY;
 
-    if (scrollValue - 200 > headerHeight) {
-      navbar.classList.add('fixed');
+      if (scrollValue - 150 > headerHeight) {
+        navbar.classList.add('fixed');
+      }
+      else if (scrollValue < headerHeight) {
+        navbar.classList.remove('fixed');
+      }
     }
-    else if (scrollValue < headerHeight) {
-      navbar.classList.remove('fixed');
-    }
+    else {}
   },
 }
-window.addEventListener('scroll', pixel.stickyElement);
+if(navbarSticky==true) { window.addEventListener('scroll', pixel.stickyElement); }
