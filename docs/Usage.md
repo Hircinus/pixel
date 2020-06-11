@@ -7,7 +7,7 @@ The classes and functions described here are all of the *current* ones that are 
 
 ### Grid
 
-Pixel's grid is built using mobile-first flexbox that can be easily applied using a series of classes, as shown in the example below (take note of the very Bootstrap-esque column naming system; very familiar):
+Pixel's grid is mobile-first and can be easily applied using a series of classes, as shown in the example below:
 ```html
 <div class="container">
   <div class="row justify-center">
@@ -26,11 +26,11 @@ Every row contains 12 spaces, which can be attributed as you wish (note that ove
 
 | Class name | Viewport (width) in px |
 | ---------- | ---------------------- |
-| col-sm-*   | [0, 700[               |
-| col-md-*   | [700, 1200[            |
-| col-lg-*   | [1200, ∞[              |
+| col-sm-*   | \[0, 700\[               |
+| col-md-*   | \[700, 1200\[            |
+| col-lg-*   | \[1200, ∞\[              |
 
-\* = [1, 12]
+\* = \[1, 12]
 
 Rows can also have classes to handle justification and alignment of its children:
 
@@ -50,8 +50,21 @@ Rows can also have classes to handle justification and alignment of its children
  
 ### Navbar
 
-Pixel's navbar is fully equipped right from the start with useful features. Remember that you need ``pixel.min.js`` to use the navbar.
+Pixel's navbar is fully equipped right from the start with useful features. 
 Below is an example of a navbar with Pixel:
+
+```html
+<nav class="nav dark medium">
+  <div class="nav-content">
+    <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
+    <a href="index.html" class="link">Home</a>
+    <a href="#" class="link disabled">About</a>
+  </div>
+</nav>
+```
+
+If you want to add a "sticky" effect to your navbar and have a toggleable dropdown menu, you'll need ``pixel.min.js`` or ``pixel.js`` to use those features.
+Below is an example of a navbar with pixel.js:
 ```html
 <nav id="navbar" class="nav dark center sticky medium">
   <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close-light.svg" src="src/assets/menu_burger-light.svg"></button>
@@ -67,7 +80,7 @@ Here's an overview of the features:
 
  - Mobile-first collapsable navbar;
  - Centered / uncentered;
- - In-menu drodpowns:
+ - In-menu hoverable drodpowns:
  
  ```html
  <div class="dropdown">
@@ -85,7 +98,7 @@ Here's an overview of the features:
  
 ### Buttons
 
-With a wide array of available colours, you can convey any message to your site visitors with stylized buttons:
+With a wide array of available colors, you can convey any message to your site visitors with stylized buttons:
 
 ```html
 <button class="blue text-white medium">Info</button>
@@ -95,7 +108,7 @@ With a wide array of available colours, you can convey any message to your site 
 <button class="red text-white medium">Alert</button>
 <button class="dark text-white medium">Other</button>
 ```
-**Note: these classes can also be used on other elements, see Misc > Colours.**
+**Note: these classes can also be used on other elements, see Misc > Colors.**
 
 ### Misc
 
@@ -116,7 +129,7 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``medium``;
  - ``large``.
  
-#### Colours:
+#### Colors:
 
 **Background-color:**
 
@@ -129,6 +142,7 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``pink``;
  - ``purple``;
  - ``white``;
+ - ``light-grey``;
  - ``grey``;
  - ``black``.
  
@@ -143,6 +157,7 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``text-pink``;
  - ``text-purple``;
  - ``text-white``;
+ - ``text-light-grey``;
  - ``text-grey``;
  - ``text-black``.
 
@@ -167,6 +182,7 @@ There are also currently many miscellaneous classes for you to use, which includ
 ### Modal
 
 You can quickly make modals to use in your site to display information for your visitors:
+
 ```html
 <div id="cover" class="modal-cover"></div>
 <div id="modal" class="row total-center modal">
@@ -203,10 +219,11 @@ pixel.getCookie(cname, value);
 </head>
 ```
 
-Additionally, you can easily change the theme of the site by simply changing the ``:root`` variable colors (make sure this styling overrides Pixel):
+Additionally, you can easily change the look and feel of your site by simply changing the ``:root`` variables (make sure this styling overrides Pixel):
 
 ```css
-/* Just change the hexadecimal values to what you wish */
+/* Just change the values to what you wish */
+/* --p-<color>-hover indicates a darker shade of the color, normally used for contrast for :hover effects */
 :root {
 --p-blue:#2a7bde;
 --p-blue-hover:#1957a2;
@@ -223,7 +240,20 @@ Additionally, you can easily change the theme of the site by simply changing the
 --p-pink:#ff748c;
 --p-pink-hover:#ff284d;
 --p-dark:#333;
---p-dark-hover:#595959
+--p-dark-hover:#595959;
+--p-white: #fff;
+--p-white-hover: #d3d3d3;
+--p-grey: #808080;
+--p-grey-hover: #000;
+--p-black: #000;
+--p-black-hover: #808080;
+--p-light-grey: #d3d3d3;
+--p-light-grey-hover: #808080;
+
+--p-anchor-indent: 100px;
+--p-font-landing-title: Nunito, sans-serif;
+--p-font-body: Arial,sans-serif;
+--p-font-code: "Ubuntu Mono",Consolas,"Courier New",monospace;
 }
 ```
 
