@@ -192,4 +192,39 @@ pixel.editCookie(cname, newValue);
 pixel.getCookie(cname, value);
 ```
 
-As of right now (May 14, 2020), this is the end of this page. Stay tuned!
+## Customization
+
+**Pixel's stylesheet doesn't use ID's and is generally not specific.** This means that it's easy to add your own stylesheet right after Pixel's to override any styles you don't want:
+
+```html
+<head>
+  <link rel="stylesheet" type="text/css" href="path/to/pixel.min.css">
+  <link rel="stylesheet" type="text/css" href="path/to/style.css"> <!-- Your stylesheet here -->
+</head>
+```
+
+Additionally, you can easily change the theme of the site by simply changing the ``:root`` variable colors (make sure this styling overrides Pixel):
+
+```css
+/* Just change the hexadecimal values to what you wish */
+:root {
+--p-blue:#2a7bde;
+--p-blue-hover:#1957a2;
+--p-red:#c4181d;
+--p-red-hover:#801013;
+--p-green:#4BB543;
+--p-green-hover:#347d2e;
+--p-purple:#7851a9;
+--p-purple-hover:#533875;
+--p-yellow:#ffd500;
+--p-yellow-hover:#b39500;
+--p-orange:#ff7b00;
+--p-orange-hover:#b35600;
+--p-pink:#ff748c;
+--p-pink-hover:#ff284d;
+--p-dark:#333;
+--p-dark-hover:#595959
+}
+```
+
+As of right now (June 11, 2020), this is the end of this page. Stay tuned!
