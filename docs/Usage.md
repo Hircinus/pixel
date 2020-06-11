@@ -8,19 +8,19 @@ The classes and functions described here are all of the *current* ones that are 
 ### Grid
 
 Pixel's grid is built using mobile-first flexbox that can be easily applied using a series of classes, as shown in the example below (take note of the very Bootstrap-esque column naming system; very familiar):
-```
-...
-<div class="row justify-center">
-  <div class="col-lg-6 col-md-8 col-sm-11">
-    <h1>Welcome!</h1>
-    <p>Some text...</p>
-  </div>
-  <div class="col-lg-6 col-md-2 col-sm-11">
-    <h1>Another title</h1>
-    <p>Some more text...</p>
+```html
+<div class="container">
+  <div class="row justify-center">
+    <div class="col-lg-6 col-md-8 col-sm-11">
+      <h1>Welcome!</h1>
+      <p>Some text...</p>
+    </div>
+    <div class="col-lg-6 col-md-2 col-sm-11">
+      <h1>Another title</h1>
+      <p>Some more text...</p>
+    </div>
   </div>
 </div>
-...
 ```
 Every row contains 12 spaces, which can be attributed as you wish (note that overflow in a row will be wrapped). Below is a table outlining each class:
 
@@ -34,37 +34,42 @@ Every row contains 12 spaces, which can be attributed as you wish (note that ove
 
 Rows can also have classes to handle justification and alignment of its children:
 
+ - ``justify-even`` (equal amount of space *between* and *around* columns);
+ - ``justify-around`` (equal amount of space *around* columns);
+ - ``justify-between`` (equal amount of space *between* columns);
  - ``justify-start``;
  - ``justify-center``;
  - ``justify-end``;
+
+ - ``align-even`` (equal amount of space *between* and *around* rows);
+ - ``align-around`` (equal amount of space *around* rows);
+ - ``align-between`` (equal amount of space *between* rows);
  - ``align-start``;
  - ``align-center``;
  - ``align-end``;
- - ``align-base``;
- - ``total-center`` (equivalent to ``justify-center`` and ``align-center`` combined).
  
 ### Navbar
 
 Pixel's navbar is fully equipped right from the start with useful features. Remember that you need ``pixel.min.js`` to use the navbar.
 Below is an example of a navbar with Pixel:
-```
-...
-<nav id="navbar" class="nav dark center medium">
-    <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
-    <div id="navContent">
-      <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
-      <a href="index.html" class="link">Home</a>
-      <a href="#" class="link disabled">About</a>
-    </div>
-  </nav>
-...
+```html
+<nav id="navbar" class="nav dark center sticky medium">
+  <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close-light.svg" src="src/assets/menu_burger-light.svg"></button>
+  <div id="navContent" class="nav-content center">
+    <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
+    <a href="index.html" class="link">Home</a>
+    <a href="#" class="link disabled">About</a>
+  </div>
+</nav>
 ```
 
 Here's an overview of the features:
 
  - Mobile-first collapsable navbar;
+ - Centered / uncentered;
  - In-menu drodpowns:
- ```
+ 
+ ```html
  <div class="dropdown">
    <a href="docs.html" class="link active">Docs</a>
    <div id="dropdownMenu" class="dropdown-content">
@@ -74,13 +79,15 @@ Here's an overview of the features:
    </div>
  </div>
  ```
+ 
  - Built-in dark and light theme (with class ``dark`` added to ``nav``);
  - Menu burger for dropdown that changes based on state.
  
 ### Buttons
 
 With a wide array of available colours, you can convey any message to your site visitors with stylized buttons:
-```
+
+```html
 <button class="blue text-white medium">Info</button>
 <button class="orange text-white medium">Warning</button>
 <button class="yellow medium">Important</button>
@@ -138,13 +145,11 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``text-white``;
  - ``text-grey``;
  - ``text-black``.
- 
-#### Horizontal rule
 
- - ``short``;
- - ``long`` (note: not adding ``short`` or ``long`` will default to a medium length);
- - ``thick-sm``;
- - ``thick-lg`` (note: not adding ``thick-sm`` or ``thick-lg`` will default to a medium thickness).
+
+~~**Horizontal rule**~~
+
+*Discontinued in Pixel 0.2*
  
 #### Border-radius
 
@@ -162,7 +167,7 @@ There are also currently many miscellaneous classes for you to use, which includ
 ### Modal
 
 You can quickly make modals to use in your site to display information for your visitors:
-```
+```html
 <div id="cover" class="modal-cover"></div>
 <div id="modal" class="row total-center modal">
   <div class="col-lg-6 col-md-8 col-sm-10 pad-md round-md">
@@ -181,8 +186,10 @@ You can quickly make modals to use in your site to display information for your 
 
 With Pixel, using cookies is as simple as a few functions:
 
- - ``pixel.addCookie(cname, value)``;
- - ``pixel.editCookie(cname, newValue)``;
- - ``pixel.getCookie(cname, value)``.
+```javascript
+pixel.addCookie(cname, value);
+pixel.editCookie(cname, newValue);
+pixel.getCookie(cname, value);
+```
 
 As of right now (May 14, 2020), this is the end of this page. Stay tuned!
