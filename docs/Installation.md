@@ -1,8 +1,21 @@
 # Installation
 
-To use Pixel in your project, simply link the CSS into your header and your JS into your footer:
+To use Pixel in your project, simply download the [CSS](https://github.com/Hircinus/pixel/blob/master/src/pixel.min.css) and [JS](https://github.com/Hircinus/pixel/blob/master/src/pixel.min.js) files needed and link them into your page:
+
+```html
+<head>
+  <link rel="stylesheet" type="text/css" href="path/to/pixel.min.css">
+  ...
+</head>
+<body>
+  ...
+  <script src="path/to/pixel.min.js"></script>
+</body>
 ```
-...
+
+Alternatively, you can directly link the files:
+
+```html
 <head>
   <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Hircinus/pixel/master/src/pixel.min.css">
   ...
@@ -11,7 +24,6 @@ To use Pixel in your project, simply link the CSS into your header and your JS i
   ...
   <script src="https://raw.githubusercontent.com/Hircinus/pixel/master/src/pixel.min.js"></script>
 </body>
-...
 ```
 
-Alternatively, using those same links, you can download the files and host them locally.
+**Note:** Check the [performance page](https://github.com/Hircinus/pixel/blob/master/docs/Performance.md) for an updated result on the latest perfomance check. Generally speaking though, downloading and locally hosting is always a faster option.
