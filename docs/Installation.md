@@ -1,6 +1,6 @@
 # Installation
 
-To use Pixel in your project, simply download the [CSS](https://github.com/Hircinus/pixel/blob/master/src/pixel.min.css) and [JS](https://github.com/Hircinus/pixel/blob/master/src/pixel.min.js) files needed and link them into your page:
+To use Pixel in your project, simply download the [CSS](https://raw.githubusercontent.com/Hircinus/pixel/blob/master/src/pixel.min.css) and [JS](https://raw.githubusercontent.com/Hircinus/pixel/blob/master/src/pixel.min.js) files needed and link them into your page:
 
 ```html
 <head>
