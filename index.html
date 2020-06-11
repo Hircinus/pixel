@@ -12,7 +12,7 @@
 <body>
   <nav id="navbar" class="nav center medium">
     <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
-    <div id="navContent">
+    <div id="navContent" class="nav-content center">
       <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
       <a href="index.html" class="link active">Home</a>
       <div class="dropdown">
@@ -36,27 +36,28 @@
     </div>
   </div>
   <div id="cover" class="modal-cover"></div>
-  <div id="modal" class="row total-center modal">
-    <div class="col-6 round-md">
-      <h2>How to import Pixel</h2>
-      <hr class="thick-sm blue text-blue">
-      <p>To use Pixel, you can either link the necessary files to your site like so:<br>
-        <code class="round-sm">
-        &lt;head&gt;<br>
-        &emsp;&lt;link rel="stylesheet" type="text/css" href="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.css"&gt;<br>
-        &lt;/head&gt;<br>
-        &lt;body&gt;<br>
-        &emsp;...<br>
-        &emsp;&lt;script src="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.js"&gt;&lt;/script&gt;<br>
-        &lt;/body&gt;
-        </code>
-        <br>
-        Or you can download the source files using those respective links.<br>
-      <button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium">Close</button>
+  <div id="modal" class="container modal">
+    <div class="row justify-center align-center">
+      <div class="col-6 round-md">
+        <h2>How to import Pixel</h2>
+        <p>To use Pixel, you can either link the necessary files to your site like so:<br>
+          <code class="round-sm">
+          &lt;head&gt;<br>
+          &emsp;&lt;link rel="stylesheet" type="text/css" href="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.css"&gt;<br>
+          &lt;/head&gt;<br>
+          &lt;body&gt;<br>
+          &emsp;...<br>
+          &emsp;&lt;script src="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.js"&gt;&lt;/script&gt;<br>
+          &lt;/body&gt;
+          </code>
+          <br>
+          Or you can download the source files (<a href="src/pixel.min.css" download="src/pixel.min.css">CSS</a>, <a href="src/pixel.min.js">JS</a>) using those respective links.<br>
+        <button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium">Close</button>
+      </div>
     </div>
   </div>
   <footer class="center dark">
-    <p class="small text-white pad-md">Site created by Jacob Alfahad using the Pixel framework &copy; 2020</p>
+    <p class="small text-white">Site created by Jacob Alfahad using the Pixel framework &copy; 2020</p>
   </footer>
   <script src="src/pixel.js"></script>
 </body>
