@@ -126,9 +126,10 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``active`` (only for navlinks);
  - ``center``;
  - ``small``;
- - ``medium``;
  - ``large``.
  
+*If small or large is not used the default is medium.*
+
 #### Colors:
 
 **Background-color:**
@@ -172,10 +173,22 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``round-md``;
  - ``round-lg``.
  
-#### Code
+#### Code tags
 
  - ``<code>...</code>``;
  - ``<inline>...</inline>``.
+ 
+#### Footer
+
+ - ``small``;
+ - ``large``.
+ 
+*If small or large is not used the default is medium.*
+
+#### Other
+
+ - ``absBtm`` (positions absolutely at bottom of page);
+ - ``absTop`` (positions absolutely at top of page).
  
 ## JS
 
@@ -225,6 +238,7 @@ Additionally, you can easily change the look and feel of your site by simply cha
 /* Just change the values to what you wish */
 /* --p-<color>-hover indicates a darker shade of the color, normally used for contrast for :hover effects */
 :root {
+font-size: 16px;
 --p-blue:#2a7bde;
 --p-blue-hover:#1957a2;
 --p-red:#c4181d;
@@ -254,7 +268,27 @@ Additionally, you can easily change the look and feel of your site by simply cha
 --p-font-landing-title: Nunito, sans-serif;
 --p-font-body: Arial,sans-serif;
 --p-font-code: "Ubuntu Mono",Consolas,"Courier New",monospace;
+
+--p-h1-size: 4.5rem;
+--p-h2-size: 3.5rem;
+--p-h3-size: 2rem;
+--p-h4-size: 1rem;
+--p-h5-size: 1rem;
+--p-h6-size: 1rem;
+/* Following variables only affect h1-h3 */
+--p-pad: 0.5rem;
+--p-margin: 0.5rem;
 }
 ```
 
-As of right now (June 11, 2020), this is the end of this page. Stay tuned!
+## Notices
+
+### Fonts
+
+Certain components come shipped in Pixel with different fonts than what most browsers ship with (Ubuntu mono and Nunito, for instance). Please note that Pixel only has the latin and latin-ext character configuration of these fonts and therefore may require you to install the fonts seperately in full or use fallback fonts if using text that does not fall within those ranges of characters.
+
+### Subject to change
+
+This document is meant to reflect the most recently documented features for the Pixel framework. This documentation is subject to change at any given moment. Certain classes, features, scripts, etc. may be discontinued without your warning. Be sure to consult this page often.
+
+As of right now (June 12, 2020), this is the end of this page. Stay tuned!
