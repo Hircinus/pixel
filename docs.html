@@ -16,7 +16,7 @@
       <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
       <a href="index.html" class="link">Home</a>
       <div class="dropdown">
-        <a href="docs.html" class="link active">Docs</a>
+        <a href="docs.html" class="link active">Docs <span class="dropdown_caret">&#9660;</span></a>
         <div id="dropdownMenu" class="dropdown-content">
           <a href="docs.html#Grid" class="link">Grid</a>
           <a href="docs.html#CSS" class="link">CSS</a>
@@ -38,27 +38,29 @@
       </div>
     </div>
   </div>
-  <a name="Grid"></a>
+  <a name="Grid" anchor="true"></a>
   <div class="container">
     <div class="row">
-      <div class="col-12">
+      <div class="col-lg-6 col-md-11 col-sm-12">
         <h2>Grid</h2>
         <h3>Basic rows and columns</h3>
         <p>
           Barebone rows and columns are great tools for organizing your page!
           <br>
-          Pixel's grid system is built using flexbox.
+          Pixel's grid system is built using CSS grid.
         </p>
       </div>
-      <div class="col-lg-8 col-md-8 col-sm-12">
+      <div class="col-lg-6 col-md-11 col-sm-12">
         <p>Check out this page's layout to get an idea of how it looks!<br>
         <code class="round-sm">
-        &lt;div class="row"&gt;<br>
-        &emsp;&lt;div class="col-lg-6 col-md-8 col-sm-12"&gt;<br>
-        &emsp;&emsp;&lt;p>One section&lt;/p&gt;<br>
-        &emsp;&lt;/div&gt;<br>
-        &emsp;&lt;div class="col-lg-6 col-md-4 col-sm-12"&gt;<br>
-        &emsp;&emsp;&lt;p&gt;Another section&lt;/p&gt;<br>
+        &lt;div class="container"&gt;<br>
+        &emsp;&lt;div class="row"&gt;<br>
+        &emsp;&emsp;&lt;div class="col-lg-6 col-md-8 col-sm-12"&gt;<br>
+        &emsp;&emsp;&emsp;&lt;p>One section&lt;/p&gt;<br>
+        &emsp;&emsp;&lt;/div&gt;<br>
+        &emsp;&emsp;&lt;div class="col-lg-6 col-md-4 col-sm-12"&gt;<br>
+        &emsp;&emsp;&emsp;&lt;p&gt;Another section&lt;/p&gt;<br>
+        &emsp;&emsp;&lt;/div&gt;<br>
         &emsp;&lt;/div&gt;<br>
         &lt;/div&gt;
         </code>
@@ -66,35 +68,31 @@
       </div>
     </div>
   </div>
-  <a name="CSS"></a>
-  <div class="row">
-    <div class="col-12">
-      <h2>CSS</h2>
-      <h3>Buttons</h3>
-      <p>
-        Buttons come in a variety of colors to demonstrate different messages.
-      </p>
-    </div>
-  </div>
-  <div class="row justify-center">
-    <div class="col-lg-8 col-md-8 col-sm-12">
-      <div class="center">
-        <button class="blue text-white medium">Info</button>
-        <button class="orange text-white medium">Warning</button>
-        <button class="yellow medium">Important</button>
-        <button class="green text-white medium">Success</button>
-        <button class="red text-white medium">Alert</button>
-        <button class="dark text-white medium">Other</button>
+  <a name="CSS" anchor="true"></a>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-11 col-sm-12">
+        <h2>CSS</h2>
+        <h3>Buttons</h3>
+        <p>
+          Buttons come in a variety of colors to demonstrate different messages.
+        </p>
       </div>
-      <div class="center">
-        <code class="round-sm">
-        &lt;button class="blue text-white medium"&gt;Info&lt;/button&gt;<br>
-        &lt;button class="orange text-white medium"&gt;Warning&lt;/button&gt;<br>
-        &lt;button class="yellow text-white medium"&gt;Important&lt;/button&gt;<br>
-        &lt;button class="green text-white medium"&gt;Success&lt;/button&gt;<br>
-        &lt;button class="red text-white medium"&gt;Alert&lt;/button&gt;<br>
-        &lt;button class="dark text-white medium"&gt;Other&lt;/button&gt;<br>
-        </code>
+      <div class="col-lg-6 col-md-11 col-sm-12">
+          <button class="blue text-white medium">Info</button>
+          <button class="orange text-white medium">Warning</button>
+          <button class="yellow medium">Important</button>
+          <button class="green text-white medium">Success</button>
+          <button class="red text-white medium">Alert</button>
+          <button class="dark text-white medium">Other</button><br>
+          <code class="round-sm">
+          &lt;button class="blue text-white medium"&gt;Info&lt;/button&gt;<br>
+          &lt;button class="orange text-white medium"&gt;Warning&lt;/button&gt;<br>
+          &lt;button class="yellow text-white medium"&gt;Important&lt;/button&gt;<br>
+          &lt;button class="green text-white medium"&gt;Success&lt;/button&gt;<br>
+          &lt;button class="red text-white medium"&gt;Alert&lt;/button&gt;<br>
+          &lt;button class="dark text-white medium"&gt;Other&lt;/button&gt;<br>
+          </code>
       </div>
     </div>
   </div>
@@ -111,15 +109,16 @@
           <button onclick="pixel.modal('modal','cover')" class="blue text-white medium">Modal</button>
         </div>
         <code class="round-sm">
-        &lt;div id="cover" class="modal-cover"&gt;&lt;/div&gt;<br>
-        &lt;div id="modal" class="row total-center modal"&gt;<br>
-        &emsp;&lt;div class="col-6 pad-md round-md"&gt;<br>
-        &emsp;&emsp;&lt;h2&gt;Current version&lt;/h2&gt;<br>
-        &emsp;&emsp;&lt;hr class="thick-sm blue text-blue"&gt;<br>
-        &emsp;&emsp;&lt;p&gt;0.1 (Alpha)&lt;br&gt;<br>
-        &emsp;&emsp;Status: Stable (Pre-release)&lt;br&gt;<br>
-        &emsp;&emsp;&lt;a href='https://www.github.com/Hircinus/pixel'>GitHub repo&lt;/a&gt;&lt;/p&gt;<br>
-        &emsp;&emsp;&lt;button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium"&gt;Close&lt;/button&gt;<br>
+        &lt;div id=&quot;cover&quot; class=&quot;modal-cover&quot;&gt;&lt;/div&gt;<br>
+        &lt;div id=&quot;modal&quot; class=&quot;container modal&quot;&gt;<br>
+        &emsp;&lt;div class=&quot;row round-md align-center&quot;&gt;<br>
+        &emsp;&emsp;&lt;div class=&quot;col-12&quot;&gt;<br>
+        &emsp;&emsp;&emsp;&lt;h3&gt;How to import Pixel&lt;/h3&gt;<br>
+        &emsp;&emsp;&emsp;&lt;p&gt;To use Pixel, you can either link the necessary files to your site like so:<br>
+        &emsp;&emsp;&emsp;&emsp;&lt;br&gt;<br>
+        &emsp;&emsp;&emsp;&emsp;Or you can download the source files (&lt;a href=&quot;src/pixel.min.css&quot; download=&quot;src/pixel.min.css&quot;&gt;CSS&lt;/a&gt;, &lt;a href=&quot;src/pixel.min.js&quot;&gt;JS&lt;/a&gt;) using those respective links.&lt;br&gt;<br>
+        &emsp;&emsp;&emsp;&lt;button onclick=&quot;pixel.modal('modal', 'cover')&quot; class=&quot;orange text-white medium&quot;&gt;Close&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;/div&gt;<br>
         &emsp;&lt;/div&gt;<br>
         &lt;/div&gt;
         </code>
@@ -128,9 +127,9 @@
   </div>
   <div id="cover" class="modal-cover"></div>
   <div id="modal" class="container modal">
-    <div class="row justify-center align-center">
-      <div class="col-6 round-md">
-        <h2>How to import Pixel</h2>
+    <div class="row round-md align-center">
+      <div class="col-12">
+        <h3>How to import Pixel</h3>
         <p>To use Pixel, you can either link the necessary files to your site like so:<br>
           <code class="round-sm">
           &lt;head&gt;<br>
@@ -176,7 +175,7 @@
       </div>
     </div>
   </div>
-  <a name="JS"></a>
+  <a name="JS" anchor="true"></a>
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -195,7 +194,7 @@
     </div>
   </div>
   <footer class="center dark">
-    <p class="small text-white">Site created by Jacob Alfahad using the Pixel framework &copy; 2020</p>
+    <p class="small text-white">Site created by Jacob Alfahad using the Pixel framework, 2020.<br>Current version: v0.2. This website and its framework, Pixel, are licensed under <a href="https://github.com/Hircinus/pixel/blob/master/LICENSE" target="_blank">EPL-2.0.</a></p>
   </footer>
   <script src="src/pixel.js"></script>
 </body>

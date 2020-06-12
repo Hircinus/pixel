@@ -16,7 +16,7 @@
       <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
       <a href="index.html" class="link active">Home</a>
       <div class="dropdown">
-        <a href="docs.html" class="link">Docs</a>
+        <a href="docs.html" class="link">Docs <span class="dropdown_caret">&#9660;</span></a>
         <div id="dropdownMenu" class="dropdown-content">
           <a href="docs.html#Grid" class="link">Grid</a>
           <a href="docs.html#CSS" class="link">CSS</a>
@@ -26,20 +26,23 @@
       <a href="#" class="link disabled">About</a>
     </div>
   </nav>
-  <div class="row total-center center">
-    <div class="col-lg-2 col-md-6 col-sm-12"><img src="src/assets/pixel-logo.svg"></div>
-    <div class="col-lg-10 col-md-6 col-sm-12"><h1>Pixel</h1>
-      <p>A clean, simple website framework built on vanilla CSS and JS.</p>
-      <button onclick="pixel.modal('modal', 'cover')" class="blue text-white medium">Import</button>
-      <button onclick="window.location.replace('https://www.github.com/Hircinus/pixel')" class="green text-white medium">Contribute</button>
-      <button onclick="window.location.replace('https://github.com/Hircinus/pixel/blob/master/LICENSE')" class="orange text-white medium">License</button>
+  <div class="container">
+    <div class="row justify-center center landing">
+      <div class="col-lg-3 col-md-6 col-sm-12"><img src="src/assets/pixel-logo.svg"></div>
+      <div class="col-lg-9 col-md-6 col-sm-12">
+        <h1>PIXEL</h1>
+        <p>A clean, simple website framework built on vanilla CSS and JS.</p>
+        <button onclick="pixel.modal('modal', 'cover')" class="blue text-white medium">Import</button><br>
+        <a href="https://www.github.com/Hircinus/pixel" target="_blank" class="text-green">Contribute</a> |
+        <a href="https://github.com/Hircinus/pixel/blob/master/LICENSE" target="_blank" class="text-orange">License</a>
+      </div>
     </div>
   </div>
   <div id="cover" class="modal-cover"></div>
   <div id="modal" class="container modal">
-    <div class="row justify-center align-center">
-      <div class="col-6 round-md">
-        <h2>How to import Pixel</h2>
+    <div class="row round-md align-center">
+      <div class="col-12">
+        <h3>How to import Pixel</h3>
         <p>To use Pixel, you can either link the necessary files to your site like so:<br>
           <code class="round-sm">
           &lt;head&gt;<br>
@@ -56,8 +59,8 @@
       </div>
     </div>
   </div>
-  <footer class="center dark">
-    <p class="small text-white">Site created by Jacob Alfahad using the Pixel framework &copy; 2020</p>
+  <footer class="center absBtm dark">
+    <p class="small text-white">Site created by Jacob Alfahad using the Pixel framework, 2020.<br>Current version: v0.2. This website and its framework, Pixel, are licensed under <a href="https://github.com/Hircinus/pixel/blob/master/LICENSE" class="text-orange" target="_blank">EPL-2.0</a>.</p>
   </footer>
   <script src="src/pixel.js"></script>
 </body>
