@@ -32,6 +32,10 @@ const pixel = {
     else {
       modal.style.display = "block";
       cover.style.display = "block";
+      cover.addEventListener("click", function(){
+        modal.style.display = "none";
+        cover.style.display = "none";
+      });
     }
   },
   editCookie: function(cname, newValue) {
@@ -109,4 +113,5 @@ const pixel = {
     else {}
   },
 }
+
 if(navbarSticky==true) { window.addEventListener('scroll', pixel.stickyElement); }
