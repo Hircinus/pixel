@@ -5,6 +5,8 @@ To use Pixel in your project, simply download the [CSS](https://raw.githubuserco
 ```html
 <head>
   <link rel="stylesheet" type="text/css" href="path/to/pixel.min.css">
+  <!-- The following stylesheet is to enable dark mode support but only download the necessary CSS if the client has it enabled and supports it -->
+  <link rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" href="path/to/pixel.dark.min.css">
   ...
 </head>
 <body>
@@ -18,6 +20,8 @@ Alternatively, you can directly link the files:
 ```html
 <head>
   <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/Hircinus/pixel/master/src/pixel.min.css">
+  <!-- The following stylesheet is to enable dark mode support but only download the necessary CSS if the client has it enabled and supports it -->
+  <link rel="stylesheet" type="text/css" media="(prefers-color-scheme: dark)" href="https://raw.githubusercontent.com/Hircinus/pixel/master/src/pixel.dark.min.css">
   ...
 </head>
 <body>
