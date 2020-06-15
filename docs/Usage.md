@@ -178,12 +178,9 @@ There are also currently many miscellaneous classes for you to use, which includ
  - ``<code>...</code>``;
  - ``<inline>...</inline>``.
  
-#### Footer
-
- - ``small``;
- - ``large``.
+~~**Footer**~~
  
-*If small or large is not used the default is medium.*
+*Footer styles discontinued in Pixel 0.3. Just use grid for footers.*
 
 #### Other
 
