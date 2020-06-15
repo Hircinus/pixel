@@ -1,4 +1,4 @@
-# Usage
+# Documentation
 
 This document will guide you as to how to use the Pixel framework in your website.
 The classes and functions described here are all of the *current* ones that are considered stable.
@@ -54,7 +54,7 @@ Pixel's navbar is fully equipped right from the start with useful features.
 Below is an example of a navbar with Pixel:
 
 ```html
-<nav class="nav dark medium">
+<nav class="nav medium">
   <div class="nav-content">
     <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
     <a href="index.html" class="link">Home</a>
@@ -92,8 +92,7 @@ Here's an overview of the features:
    </div>
  </div>
  ```
- 
- - Built-in dark and light theme (with class ``dark`` added to ``nav``);
+
  - Menu burger for dropdown that changes based on state.
  
 ### Buttons
