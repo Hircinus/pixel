@@ -9,6 +9,7 @@ Pixel is a minimalistic website framework intended to provide a clean and respon
 ## Current features
 
  - Easy grid with classes;
+ - Basic and full version files available;
  - Navbar:
    - Dark and light theme;
    - Responsive with menu burger and close icons;
