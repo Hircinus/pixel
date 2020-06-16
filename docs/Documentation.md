@@ -217,6 +217,16 @@ pixel.editCookie(cname, newValue);
 pixel.getCookie(cname, value);
 ```
 
+### Global variables
+
+The following global variables are pre-set by Pixel and should be avoided:
+
+ - ``navContent``;
+ - ``menuButton``;
+ - ``navbar``;
+ - ``ogImg``;
+ - ``hiddenNav``.
+
 ## Customization
 
 **Pixel's stylesheet doesn't use ID's and is generally not specific.** This means that it's easy to add your own stylesheet right after Pixel's to override any styles you don't want:
