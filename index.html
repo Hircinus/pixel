@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
   <title>Home | Pixel</title>
@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav id="navbar" class="nav center medium">
+  <nav id="navbar" class="nav center side medium">
     <button class="menuButton" onclick="pixel.navbarExtend()"><img id="menuButton" data-src="src/assets/menu_close.svg" src="src/assets/menu_burger.svg"></button>
     <div id="navContent" class="nav-content center">
       <a href="index.html" class="link"><img src="src/assets/pixel-logo.svg"></a>
@@ -27,16 +27,18 @@
     </div>
   </nav>
   <div class="container">
-    <div class="row justify-center center landing">
-      <div class="col-lg-3 col-md-6 col-sm-12"><img src="src/assets/pixel-logo.svg"></div>
-      <div class="col-lg-9 col-md-6 col-sm-12">
-        <h1>PIXEL</h1>
-        <p>A clean, simple website framework built on vanilla CSS and JS.</p>
-        <button onclick="pixel.modal('modal', 'cover')" class="blue text-white medium">Import</button><br>
-        <a href="https://www.github.com/Hircinus/pixel" target="_blank" class="text-green">Contribute</a> |
-        <a href="https://github.com/Hircinus/pixel/blob/master/LICENSE" target="_blank" class="text-orange">License</a>
+      <div class="row justify-center center landing">
+          <div class="col-1"></div>
+          <div class="col-10">
+              <img src="src/assets/pixel-logo.svg">
+              <h1>PIXEL</h1>
+              <p>A clean, simple website framework built on vanilla CSS and JS.</p>
+              <button onclick="pixel.modal('modal', 'cover')" class="blue text-white medium">Import</button><br>
+              <a href="https://www.github.com/Hircinus/pixel" target="_blank" class="text-green">Contribute</a> |
+              <a href="https://github.com/Hircinus/pixel/blob/master/LICENSE" target="_blank" class="text-orange">License</a>
+          </div>
+          <div class="col-10"></div>
       </div>
-    </div>
   </div>
   <div id="cover" class="modal-cover"></div>
   <div id="modal" class="container modal">
@@ -44,28 +46,39 @@
       <div class="col-12">
         <h3>How to import Pixel</h3>
         <p>To use Pixel, you can either link the necessary files to your site like so:<br>
-          <code class="round-sm">
-          &lt;head&gt;<br>
-          &emsp;&lt;link rel="stylesheet" type="text/css" href="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.css"&gt;<br>
-          &lt;/head&gt;<br>
-          &lt;body&gt;<br>
-          &emsp;...<br>
-          &emsp;&lt;script src="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.js"&gt;&lt;/script&gt;<br>
-          &lt;/body&gt;
-          </code>
+          <code class="round-sm">&lt;head&gt;<br>&emsp;&lt;link rel="stylesheet" type="text/css" href="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.css"&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&emsp;...<br>&emsp;&lt;script src="https://github.com/Hircinus/pixel/blob/master/src/pixel.min.js"&gt;&lt;/script&gt;<br>&lt;/body&gt;</code>
           <br>
-          Or you can download the source files (<a href="src/pixel.min.css" download="src/pixel.min.css">CSS</a>, <a href="src/pixel.min.js">JS</a>) using those respective links.<br>
+          Or you can download the source files (<a href="src/pixel.min.css" target="_blank" download="src/pixel.min.css">CSS</a>, <a href="src/pixel.min.js" target="_blank" download="src/pixel.min.js">JS</a>) using those respective links.<br>
         <button onclick="pixel.modal('modal', 'cover')" class="orange text-white medium">Close</button>
       </div>
     </div>
   </div>
   <div class="container">
-    <div class="row dark justify-center center">
+    <div class="row dark justify-center pad-lg center">
       <div class="col-12">
         <p class="small text-white">Site created by Jacob Alfahad using the Pixel framework, 2020.<br>Current version: v0.2. This website and its framework, Pixel, are licensed under <a href="https://github.com/Hircinus/pixel/blob/master/LICENSE" class="text-orange" target="_blank">EPL-2.0</a>.</p>
       </div>
     </div>
   </div>
+    <div class="container">
+        <div class="row cards">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                <img src="src/assets/pixel-logo.svg" />
+                <h3>My name</h3>
+                <hr />
+                <p>My description. Probably something about computers.</p>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                Lorem ipsum...
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                Lorem ipsum...
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-12">
+                Lorem ipsum...
+            </div>
+        </div>
+    </div>
   <script src="src/pixel.js"></script>
 </body>
 </html>
